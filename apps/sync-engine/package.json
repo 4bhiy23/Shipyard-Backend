@@ -1,0 +1,15 @@
+{
+  "name": "@shipyard/sync-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shipyard Sync Engine — Two-way GitHub Synchronization",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

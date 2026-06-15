@@ -1,16 +1,27 @@
 {
-  "name": "shipyard_backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "shipyard-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shipyard — Engineering Operations & Intelligence Platform (Backend Services)",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:gateway": "node --watch apps/api-gateway/src/index.js",
+    "dev:sync": "node --watch apps/sync-engine/src/index.js",
+    "dev": "npm run dev:gateway & npm run dev:sync",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"No tests configured yet\" && exit 0"
   },
-  "keywords": [],
+  "keywords": ["engineering-ops", "github-integration", "developer-tools"],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "express": "^5.2.1"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0"
   }
 }
