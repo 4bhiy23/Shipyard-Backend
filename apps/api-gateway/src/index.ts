@@ -14,6 +14,9 @@ import config from './config/index.js';
 import routes from './routes/index.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
+import { toNodeHandler } from 'better-auth/node';
+import { auth } from './libs/auth.js';
+
 const app = express();
 
 // ── Security ──────────────────────────────────────────
@@ -28,6 +31,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // ── Request Logging ───────────────────────────────────
 app.use(morgan(config.env === 'production' ? 'combined' : 'dev'));
+
+// ── Authentication Routes ──────────────────────────────
+app.all('/api/auth/*splat', toNodeHandler(auth));
 
 // ── Routes ────────────────────────────────────────────
 app.use('/api', routes);

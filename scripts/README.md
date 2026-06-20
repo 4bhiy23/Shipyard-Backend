@@ -4,10 +4,10 @@
 
 ## Contents
 
-| Directory | Purpose |
-|-----------|---------|
+| Directory     | Purpose                         |
+| ------------- | ------------------------------- |
 | `migrations/` | Database schema migration files |
-| `seed/` | Development seed data scripts |
+| `seed/`       | Development seed data scripts   |
 
 ## Usage
 

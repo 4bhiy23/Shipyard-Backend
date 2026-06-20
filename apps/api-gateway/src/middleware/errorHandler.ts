@@ -7,7 +7,10 @@
  */
 
 // eslint-disable-next-line no-unused-vars
-export function errorHandler(err, _req, res, _next) {
+
+import type { Request, Response, NextFunction } from 'express';
+
+export function errorHandler(err: any, _req: Request, res: Response, _next: NextFunction) {
   const statusCode = err.statusCode || 500;
   const message = err.message || 'Internal Server Error';
 
@@ -30,7 +33,7 @@ export function errorHandler(err, _req, res, _next) {
  *
  * Catches requests that don't match any defined route.
  */
-export function notFoundHandler(req, res) {
+export function notFoundHandler(req: Request, res: Response) {
   res.status(404).json({
     error: {
       status: 404,
