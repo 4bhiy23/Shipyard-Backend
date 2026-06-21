@@ -21,15 +21,15 @@ Shipyard-Backend/
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Runtime | Node.js 20+ |
-| Framework | Express 5 |
-| Language | JavaScript (ES2022+) |
-| Auth | JWT + GitHub OAuth (planned) |
-| Database | PostgreSQL (planned) |
-| Containerization | Docker |
-| CI/CD | GitHub Actions |
+| Layer            | Technology                   |
+| ---------------- | ---------------------------- |
+| Runtime          | Node.js 20+                  |
+| Framework        | Express 5                    |
+| Language         | JavaScript (ES2022+)         |
+| Auth             | JWT + GitHub OAuth (planned) |
+| Database         | PostgreSQL (planned)         |
+| Containerization | Docker                       |
+| CI/CD            | GitHub Actions               |
 
 ## Quick Start
 
@@ -47,12 +47,15 @@ npm run dev:sync
 ## Services
 
 ### API Gateway (`apps/api-gateway`)
+
 The centralized entry point for all client-facing requests. Handles authentication, authorization, request validation, rate limiting, and routes requests to appropriate service handlers.
 
 ### Sync Engine (`apps/sync-engine`)
+
 The core synchronization service that maintains a two-way data flow with GitHub. Receives webhooks, processes repository events, and maps them to Shipyard's internal workflow state machine.
 
 ### Shared Types (`packages/shared-types`)
+
 Common domain definitions shared across services — workflow state enums, role definitions, and interface contracts that ensure type safety across service boundaries.
 
 ## Contributing

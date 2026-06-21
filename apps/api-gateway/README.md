@@ -29,10 +29,10 @@ src/
 
 ## Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/api/health` | Service health check |
-| `GET` | `/api/health/detailed` | Detailed health with uptime & memory |
+| Method | Path                   | Description                          |
+| ------ | ---------------------- | ------------------------------------ |
+| `GET`  | `/api/health`          | Service health check                 |
+| `GET`  | `/api/health/detailed` | Detailed health with uptime & memory |
 
 ## Running
 

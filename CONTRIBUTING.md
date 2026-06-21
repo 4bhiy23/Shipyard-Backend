@@ -27,14 +27,14 @@ npm run format
 
 ## Branch Naming Convention
 
-| Prefix | Purpose | Example |
-|--------|---------|---------|
-| `feat/` | New feature | `feat/github-webhook-receiver` |
-| `fix/` | Bug fix | `fix/auth-token-expiry` |
-| `docs/` | Documentation | `docs/api-gateway-readme` |
-| `refactor/` | Code refactoring | `refactor/middleware-chain` |
-| `test/` | Adding tests | `test/health-endpoint` |
-| `chore/` | Tooling/config | `chore/eslint-config` |
+| Prefix      | Purpose          | Example                        |
+| ----------- | ---------------- | ------------------------------ |
+| `feat/`     | New feature      | `feat/github-webhook-receiver` |
+| `fix/`      | Bug fix          | `fix/auth-token-expiry`        |
+| `docs/`     | Documentation    | `docs/api-gateway-readme`      |
+| `refactor/` | Code refactoring | `refactor/middleware-chain`    |
+| `test/`     | Adding tests     | `test/health-endpoint`         |
+| `chore/`    | Tooling/config   | `chore/eslint-config`          |
 
 ## Commit Messages
 
@@ -47,6 +47,7 @@ Follow the [Conventional Commits](https://www.conventionalcommits.org/) specific
 ```
 
 **Examples:**
+
 - `feat(gateway): add health check endpoint`
 - `fix(sync): handle webhook signature verification`
 - `docs(readme): update quick start guide`

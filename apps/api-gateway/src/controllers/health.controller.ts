@@ -9,7 +9,10 @@
  * GET /api/health
  * Basic liveness probe.
  */
-export function getHealth(_req, res) {
+
+import type { Request, Response } from 'express';
+
+export function getHealth(_req: Request, res: Response) {
   res.status(200).json({
     status: 'healthy',
     service: 'api-gateway',
@@ -21,7 +24,7 @@ export function getHealth(_req, res) {
  * GET /api/health/detailed
  * Detailed readiness check with uptime and memory usage.
  */
-export function getHealthDetailed(_req, res) {
+export function getHealthDetailed(_req: Request, res: Response) {
   const memoryUsage = process.memoryUsage();
 
   res.status(200).json({

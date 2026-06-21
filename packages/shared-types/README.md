@@ -10,11 +10,11 @@ This package serves as the **single source of truth** for domain concepts that c
 
 ### Enums
 
-| Enum | Description |
-|------|-------------|
-| `WorkflowState` | Engineering workflow lifecycle states (Backlog → In Progress → Review → Merged → Released) |
-| `UserRole` | Platform roles (Org Admin, Manager, Engineer) |
-| `GitHubEventType` | Supported GitHub webhook event types |
+| Enum              | Description                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| `WorkflowState`   | Engineering workflow lifecycle states (Backlog → In Progress → Review → Merged → Released) |
+| `UserRole`        | Platform roles (Org Admin, Manager, Engineer)                                              |
+| `GitHubEventType` | Supported GitHub webhook event types                                                       |
 
 ### Interfaces (Planned)
 

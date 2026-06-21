@@ -29,10 +29,10 @@ src/
 
 ## Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
+| Method | Path               | Description                   |
+| ------ | ------------------ | ----------------------------- |
 | `POST` | `/webhooks/github` | Receive GitHub webhook events |
-| `GET`  | `/health` | Service liveness check |
+| `GET`  | `/health`          | Service liveness check        |
 
 ## Running
 
