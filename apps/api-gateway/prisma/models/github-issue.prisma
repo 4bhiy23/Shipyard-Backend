@@ -1,0 +1,8 @@
+model GitHubIssue {
+  githubIssueId String @id
+  issueId       String @unique
+
+  issue         Issue @relation(fields: [issueId], references: [id])
+
+  repositories Repository[]
+}

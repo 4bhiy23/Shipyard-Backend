@@ -1,0 +1,9 @@
+model CalendarEvent {
+  id        String @id @default(uuid())
+
+  issueId   String
+  startTime DateTime
+  endTime   DateTime
+
+  issue     Issue @relation(fields: [issueId], references: [id])
+}

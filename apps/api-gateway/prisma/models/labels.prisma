@@ -1,0 +1,9 @@
+model Label {
+  id      String @id @default(uuid())
+
+  issueId String
+  name    String
+  color   String
+
+  issue   Issue @relation(fields: [issueId], references: [id])
+}

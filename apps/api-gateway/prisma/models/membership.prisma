@@ -1,0 +1,13 @@
+model Membership {
+  id      String @id @default(uuid())
+
+  orgId   String
+  userId  String
+
+  role    String
+
+  org     Org  @relation(fields: [orgId], references: [id])
+  user    User @relation(fields: [userId], references: [id])
+
+  @@unique([orgId, userId])
+}

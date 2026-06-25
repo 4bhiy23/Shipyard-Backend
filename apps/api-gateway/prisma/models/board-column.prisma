@@ -1,0 +1,10 @@
+model BoardColumn {
+  id      String @id @default(uuid())
+  boardId String
+
+  name    String
+  pos     Int
+
+  board   Board @relation(fields: [boardId], references: [id])
+  issues  Issue[]
+}

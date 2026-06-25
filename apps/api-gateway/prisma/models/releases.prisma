@@ -1,0 +1,8 @@
+model Release {
+  id           String @id @default(uuid())
+  repositoryId String
+
+  version      String
+
+  repository   Repository @relation(fields: [repositoryId], references: [id])
+}

@@ -1,0 +1,15 @@
+model Project {
+  id          String  @id @default(uuid())
+  orgId       String
+
+  name        String
+  key         String
+  description String?
+
+  org         Org     @relation(fields: [orgId], references: [id])
+
+  boards      Board[]
+  issues      Issue[]
+  sprints     Sprint[]
+  repositories Repository[]
+}

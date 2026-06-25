@@ -1,0 +1,8 @@
+model Org {
+  id        String   @id @default(uuid())
+  name      String
+  slug      String   @unique
+
+  projects  Project[]
+  members   Membership[]
+}

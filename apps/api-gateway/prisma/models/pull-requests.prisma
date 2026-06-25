@@ -1,0 +1,8 @@
+model PullRequest {
+  githubPullId Int @id @default(autoincrement())
+
+  issueId      String @unique
+  status       String
+
+  issue        Issue @relation(fields: [issueId], references: [id])
+}

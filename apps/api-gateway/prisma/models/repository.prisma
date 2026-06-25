@@ -1,0 +1,12 @@
+model Repository {
+  id            String @id @default(uuid())
+  projectId     String
+
+  name          String
+  githubRepoId  String
+
+  project       Project @relation(fields: [projectId], references: [id])
+  githubIssues  GitHubIssue[]
+
+  releases Release[]
+}
