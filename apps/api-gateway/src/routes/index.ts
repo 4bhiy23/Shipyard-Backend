@@ -7,11 +7,15 @@
 
 import { Router } from 'express';
 import healthRoutes from './health.routes.js';
+import testRoutes from './test.routes.js';
 
 const router = Router();
 
 // ── Health ────────────────────────────────────────────
 router.use('/health', healthRoutes);
+
+// ── Test __────────────────────────────────────────────
+router.use('/test', testRoutes);
 
 // ── Future Routes ────────────────────────────────────
 // router.use('/auth',      authRoutes);
